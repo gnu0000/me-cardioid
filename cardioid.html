@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Cardioid</title>
+      <link type="text/css" rel="stylesheet" href="cardioid.css" />
+      <script type="text/javascript" src="/js/jquery.min.js"></script>
+      <script type="text/javascript" src="cardioid.js"></script>
+   </head>
+     
+   <body>
+      <div id="maincontainer">
+         <canvas class="petridish" id="petridish" width="1920" height="1200">
+            If you can see this, you need a new browser.
+         </canvas>
+      </div>
+      <div id="vals-div">
+         <pre>
+ Points:      <input type="text" id="points" />
+ Factor:      <input type="text" id="factor" />
+ Max Points:  <input type="text" id="maxpoints" />
+ Interval:    <input type="text" id="interval" />
+ DeltaFactor: <input type="text" id="deltafactor" />
+ PointSize:   <input type="text" id="pointsize" />
+         </pre>
+      </div>
+      <div id="buttons">
+         <div>
+         <button data-val='{"factor":2,"interval":40}'>02</button>
+         <button data-val='{"factor":3,"interval":40}'>03</button>
+         <button data-val='{"factor":4,"interval":35}'>04</button>
+         <button data-val='{"factor":5,"interval":30}'>05</button>
+         <button data-val='{"factor":7,"interval":30}'>07</button>
+         <button data-val='{"points":20,"factor":20,"interval":35}'>20</button>
+         <button data-val='{"points":20,"factor":23,"interval":30}'>23</button>
+         <button data-val='{"factor":37,"interval":60}'>37</button>
+         <button data-val='{"factor":40,"interval":60}'>40</button>
+         <button data-val='{"factor":64,"interval":40}'>64</button>
+         <button data-val='{"factor":99,"interval":40}'>99</button>
+         <button data-val='{"factor":100,"interval":40,"pointsize":0}'>100</button>
+         <button data-val='{"factor":101,"interval":40,"pointsize":0}'>101</button>
+         <button data-val='{"factor":2,"maxpoints":600,"interval":25,"linethickness":10,"pointsize":0}'>Z1</button>
+         <button data-val='{"points":250,"factor":99,"maxpoints":1500,"interval":55,"linethickness":1,"pointsize":75,"pointcolor":"cyan"}'>Z2</button>
+         <button data-val='{"points":500,"factor":20,"deltafactor":0.05,"interval":40,"linethickness":1,"pointsize":0}'>Z3</button>
+         <button data-val='{"points":500,"factor":72,"deltafactor":0.01,"interval":40,"linethickness":1,"pointsize":0}'>Z4</button>
+         <button data-val='{"points":500,"factor":82.8,"deltafactor":0.005,"interval":35,"linethickness":1,"pointsize":0}'>Z5</button>
+         <button data-val='{"points":195,"factor":99,"maxpoints":800,"startpaused":1}'>P1</button>
+         <button data-val='{"points":244,"factor":99,"maxpoints":800,"startpaused":1}'>P2</button>
+         <button data-val='{"points":395,"factor":100,"interval":50,"pointsize":0,"maxpoints":2000,"linethickness":1,"startpaused":1}'>P3</button>
+         <button data-val='{"points":39,"factor":97,"interval":60,"pointsize":0,"maxpoints":2000,"linethickness":1,"startpaused":1}'>P4</button>
+         </div>
+      </div>
+      <div id="help">
+         <pre>
+ [space] - Toggle screen pause
+ [f]     - Set factor
+ [p]     - Set initial point count
+ [m]     - Set max point count
+ [r]     - Reset
+ [v]     - Change values
+ [d]     - Toggle frames/second window
+ [h]     - Toggle this help window
+ [1-9]   - Set factor
+ [+-]    - Increase/decrease speed
+         </pre>
+      </div>
+      <div id="debug-info"></div>
+   </body>
+</html>
